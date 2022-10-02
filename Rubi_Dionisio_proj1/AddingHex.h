@@ -3,14 +3,14 @@
 
 class AddingHex {
     private:
-        std::string keyword;
-        int hex1;
-        int hex2;
-        int result;
+        std::string keyword; // This will always read (ADD) for this class.
+        uint32_t hex1; // First operand
+        uint32_t hex2; // Second operand
+        uint32_t result; // Result of the addition
 
     public:
-        AddingHex(std::string newKeyword, int newHex1, int newHex2);
+        AddingHex(std::string newKeyword, uint32_t newHex1, uint32_t newHex2);
         void addHex();
-        std::string getResult();
+        void getResult();
         ~AddingHex();
 };

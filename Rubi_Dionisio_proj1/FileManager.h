@@ -1,16 +1,17 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+
 #include "AddingHex.h"
 
 class FileManager {
     private:
-        int operand1;
-        int operand2;
-        std::string oper;
+        uint32_t operand1; // First operand
+        uint32_t operand2; // Second operand
+        std::string oper; // The keyword that is used to determine what operation to perform.
     public:
         void readFile(std::string fileName);
-        int getOperand1();
-        int getOperand2();
+        uint32_t getOperand1();
+        uint32_t getOperand2();
         std::string getOper();
 };

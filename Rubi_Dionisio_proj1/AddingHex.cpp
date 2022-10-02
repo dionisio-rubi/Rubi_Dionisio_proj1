@@ -1,17 +1,21 @@
 #include "AddingHex.h"
 
-AddingHex::AddingHex(std::string newKeyword, int newHex1, int newHex2){
+// Constructor: assigns the values of the operands and the keyword (ADD) to use in this class to add.
+AddingHex::AddingHex(std::string newKeyword, uint32_t newHex1, uint32_t newHex2){
     keyword = newKeyword;
     hex1 = newHex1;
     hex2 = newHex2;
 }
 
+// Does the actual adding, in this the numbers are in added in decimal form.
 void AddingHex::addHex(){
     result = hex1 + hex2;
 }
 
-std::string AddingHex::getResult(){
-    return keyword + " " + std::to_string(hex1) + " " + std::to_string(hex2) + " RESULT: " + std::to_string(result);
+// Prints out the result of the addition. When printing, all the numbers are converted back to hex as displayed as such.
+void AddingHex::getResult(){
+    std::cout << std::hex << keyword << " \t0x" << hex1 << " \t0x" << hex2 << " \tResult: 0x" << result << std::endl;
 }
 
+// Destructor: does nothing.
 AddingHex::~AddingHex() = default;
