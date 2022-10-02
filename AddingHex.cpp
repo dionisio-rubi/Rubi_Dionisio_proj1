@@ -14,7 +14,7 @@ void AddingHex::addHex(){
 
 // Prints out the result of the addition. When printing, all the numbers are converted back to hex as displayed as such.
 void AddingHex::getResult(){
-    std::cout << std::hex << keyword << " \t0x" << hex1 << " \t0x" << hex2 << " \tResult: 0x" << result << std::endl;
+    std::cout << std::hex << keyword << std::setw(6) << "0x" << hex1 << std::setw(12) << "0x" << hex2 << std::setw(12) << "Result: 0x" << result << std::endl;
 }
 
 // Destructor: does nothing.
